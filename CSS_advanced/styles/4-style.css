@@ -1,4 +1,23 @@
 :root {
+    --color-primary: #d73953;
+    --color-black: #090909;
+    --color-white: #ffffff;
+    --color-light-grey: #f3f3f3;
+    --color-dark-grey: #353535;
+    --text-color: var(--color-black);
+  }
+  
+  body,
+  a {
+    color: var(--text-color);
+  }
+  
+  .card-category,
+  .section-tagline {
+    color: var(--color-primary);
+  }
+  
+:root {
     --font-family-base: "Helvetica Neue", Helvetica, Arial, sans-serif;
     --font-family-title: var(--font-family-base);
   }
