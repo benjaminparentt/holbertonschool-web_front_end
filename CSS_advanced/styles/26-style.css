@@ -6,41 +6,41 @@
 }
 
 :root {
-    --primary-color: #d73953;
-    --black-color: #090909;
-    --white-color: #ffffff;
-    --light-grey-color: #f3f3f3;
-    --dark-grey-color: #353535;
-    --main-text-color: var(--black-color);
+    --color-primary: #d73953;
+    --color-black: #090909;
+    --color-white: #ffffff;
+    --color-light-grey: #f3f3f3;
+    --color-dark-grey: #353535;
+    --text-color: var(--color-black);
+
+    --font-family-base: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --font-family-title: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --font-size-small: 1.2rem;
+    --font-size-medium: 1.6rem;
+    --font-size-large: 1.8rem;
+    --font-size-x-large: 2.3rem;
+    --font-size-xx-large: 4.8rem;
+
+    --font-weight-regular: 400;
+    --font-weight-bold: 700;
+    --line-height-small: 1.2;
+    --line-height-base: 1.5;
+    --line-height-big: 1.8;
+
     --button-display: inline-block;
     --button-padding: 1.5rem 3rem;
-    --button-border: 0.2rem solid var(--primary-color);
-    --button-color: var(--black-color);
+    --button-border: 0.2rem solid var(--color-primary);
+    --button-color: var(--color-black);
     --button-text-decoration: none;
     --button-font-size: var(--font-size-large);
-    --button-hover-color: var(--white-color);
+    --button-hover-color: var(--color-white);
     --button-hover-text-decoration: none;
-    --button-hover-background: var(--primary-color);
-    --base-font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    --title-font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --button-hover-background: var(--color-primary);
 
-    --small-font-size: 1.2rem;
-    --medium-font-size: 1.6rem;
-    --large-font-size: 1.8rem;
-    --x-large-font-size: 2.3rem;
-    --xx-large-font-size: 4.8rem;
-
-    --regular-font-weight: 400;
-    --bold-font-weight: 700;
-
-    --small-line-height: 1.2;
-    --base-line-height: 1.5;
-    --big-line-height: 1.8;
-
-    --header-align-center: center;
-    --tagline-text-uppercase: uppercase;
+    --section-header-align: center;
+    --section-tagline-transform: uppercase;
     --section-title-margin: 0;
-    --section-title-color: var(--black-color);
+    --section-title-color: var(--color-black);
 
     --section-padding: 5rem 0;
     --section-header-padding: 0 0 3rem;
@@ -48,62 +48,20 @@
     --section-footer-padding: 3rem 0 0;
     --section-footer-align: center;
     --footer-padding: 5rem 0 1rem;
-
-    --nav-item-font-family: var(--title-font-family);
-    --nav-item-font-weight: var(--bold-font-weight);
-    --nav-item-font-size: var(--medium-font-size);
-    --nav-item-letter-spacing: 0.04rem; /* 4% of the root font size */
-    --nav-item-display: inline-block;
-    --nav-item-margin: 0 0 3rem 0;
-    --nav-item-link-hover: var(--primary-color);
-    --section-tagline-margin: 0;
 }
 
 html {
-    font-size: 62.5%;
     scroll-behavior: smooth;
-}
-
-.button {
-    display: var(--button-display);
-    padding: var(--button-padding);
-    border: var(--button-border);
-    color: var(--button-color);
-    text-decoration: var(--button-text-decoration);
-    font-size: var(--button-font-size);
-    background-color: transparent; /* Ensures the button background is initially transparent or set to a specific color */
-    cursor: pointer; /* Optional: Improves user experience by changing the cursor on hover */
-}
-
-.button:hover {
-    color: var(--button-hover-color);
-    text-decoration: var(--button-hover-text-decoration);
-    background-color: var(--button-hover-background);
-}
-
-[data-section-theme="dark"] {
-    --button-color: var(--white-color);
-}
-
-.footer-address {
-    color: var(--text-color); /* Sets the color of the text in the footer-address class to the text-color property */
-}
-
-.social-link {
-    display: block; /* Renders .social-link as a block element */
-}
-
-.social-link svg {
-    fill: var(--text-color); /* Fills in the color of svg children within .social-link with the text-color variable */
+    font-size: 62.5%;
 }
 
 body {
     margin: 0;
-    color: var(--main-text-color);
-    font-family: var(--base-font-family);
-    font-size: var(--medium-font-size);
-    font-weight: var(--regular-font-weight);
-    line-height: var(--base-line-height);
+    color: var(--text-color);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-base);
 }
 
 a:link, a:visited {
@@ -115,22 +73,71 @@ a:hover {
 }
 
 a:active {
-    background-color: var(--light-grey-color);
+    background-color: var(--color-light-grey);
 }
 
 .visually-hidden {
     display: none;
 }
 
-/* Additional global styles... */
+.button {
+    display: var(--button-display);
+    padding: var(--button-padding);
+    border: var(--button-border);
+    color: var(--button-color);
+    text-decoration: var(--button-text-decoration);
+    font-size: var(--button-font-size);
+}
+
+.button:hover {
+    color: var(--button-hover-color);
+    background-color: var(--button-hover-background);
+    text-decoration: var(--button-hover-text-decoration);
+}
+
+.card-category {
+    color: var(--color-primary);
+}
+
+.card-services .card-title {
+    margin: 0;
+}
+
+.card-services a {
+    display: block;
+    padding: 2rem;
+    background-color: var(--color-light-grey);
+}
+
+.card-services a:hover {
+    color: var(--color-white);
+    background-color: var(--color-primary);
+    text-decoration: none;
+}
+
+.card-testimonial {
+    text-align: center;
+}
+
+.card-testimonial .card-avatar {
+    border-radius: 50%;
+    width: 10rem;
+    height: 10rem;
+}
+
+.card-testimonial .card-quote cite {
+    display: block;
+    padding-top: 1rem;
+    color: var(--color-primary);
+}
 
 .section {
     padding: var(--section-padding);
 }
 
 .section-header {
+    text-align: var(--section-header-align);
     padding: var(--section-header-padding);
-    text-align: var(--header-align-center);
 }
 
 .section-body {
@@ -142,32 +149,23 @@ a:active {
     text-align: var(--section-footer-align);
 }
 
-.section-title, .section-tagline {
-    font-family: var(--title-font-family);
-    font-weight: var(--bold-font-weight);
-}
-
 .section-title {
-    font-size: var(--xx-large-font-size);
+    font-family: var(--font-family-title);
+    font-size: var(--font-size-xx-large);
+    font-weight: var(--font-weight-bold);
     margin: var(--section-title-margin);
     color: var(--section-title-color);
 }
 
 .section-tagline {
-    text-transform: var(--tagline-text-uppercase);
-    margin: var(--section-tagline-margin);
-}
-
-/* Dark Theme Adjustments */
-[data-section-theme="dark"] {
-    --text-color: var(--white-color);
-    --section-title-color: var(--white-color);
-    background-color: var(--black-color);
+    font-family: var(--font-family-title);
+    text-transform: var(--section-tagline-transform);
+    font-weight: var(--font-weight-bold);
 }
 
 .container {
     width: 960px;
-    margin: 0 auto;
+    margin: auto;
 }
 
 .navbar-menu {
@@ -185,8 +183,8 @@ a:active {
     display: var(--nav-item-display);
     margin: var(--nav-item-margin);
     font-family: var(--nav-item-font-family);
-    font-size: var(--nav-item-font-size);
     font-weight: var(--nav-item-font-weight);
+    font-size: var(--nav-item-font-size);
     letter-spacing: var(--nav-item-letter-spacing);
 }
 
@@ -197,49 +195,6 @@ a:active {
 
 .nav .nav-link:hover {
     color: var(--nav-item-link-hover);
-}
-
-.row::after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-.card-testimonial {
-    text-align: center; /* Centers the text within the testimonial card */
-}
-
-.card-testimonial .card-avatar {
-    border-radius: 50%;
-    width: calc(10 * 1rem);
-    height: calc(10 * 1rem);
-}
-
-.card-testimonial .card-quote cite {
-    display: block;
-    padding-top: calc(1 * 1rem);
-    color: var(--primary-color);
-}
-
-.card-services .card-title {
-    margin: 0; /* Removes margin on all sides */
-}
-
-.card-services a {
-    display: block; /* Renders as block level elements */
-    padding: calc(2 * 1rem);
-    background-color: var(--color-light-grey); /* Sets the background color */
-}
-
-.card-services a:hover {
-    color: var(--color-white); /* Sets the foreground color on hover */
-    background-color: var(--color-primary);
-    text-decoration: none;
-}
-
-[class*="col-"] {
-    float: left;
-    padding: 0.5rem;
 }
 
 .footer {
@@ -253,7 +208,26 @@ a:active {
     list-style: none;
 }
 
-.footer-copyright {
-    font-size: var(--small-font-size);
+.footer-address {
     color: var(--text-color);
+}
+
+.social-link {
+    display: block;
+}
+
+.social-link > svg {
+    fill: var(--text-color);
+}
+
+.footer-copyright {
+    margin: 0;
+    font-size: var(--font-size-small);
+    color: var(--text-color);
+}
+
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
 }
