@@ -205,20 +205,36 @@ a:active {
     clear: both;
 }
 
+.card-testimonial {
+    text-align: center; /* Centers the text within the testimonial card */
+}
+
+.card-testimonial .card-avatar {
+    border-radius: 50%;
+    width: calc(10 * 1rem);
+    height: calc(10 * 1rem);
+}
+
+.card-testimonial .card-quote cite {
+    display: block;
+    padding-top: calc(1 * 1rem);
+    color: var(--primary-color);
+}
+
 .card-services .card-title {
     margin: 0; /* Removes margin on all sides */
 }
 
 .card-services a {
     display: block; /* Renders as block level elements */
-    padding: calc(2 * 1rem); /* Sets padding to 2x the root element (assuming root font-size is 1rem for this calculation) */
+    padding: calc(2 * 1rem);
     background-color: var(--color-light-grey); /* Sets the background color */
 }
 
 .card-services a:hover {
     color: var(--color-white); /* Sets the foreground color on hover */
-    background-color: var(--color-primary); /* Sets the background color on hover */
-    text-decoration: none; /* Ensures text is not underlined on hover */
+    background-color: var(--color-primary);
+    text-decoration: none;
 }
 
 [class*="col-"] {
