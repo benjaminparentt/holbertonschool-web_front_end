@@ -31,17 +31,22 @@
 
     --header-align-center: center;
     --tagline-text-uppercase: uppercase;
+    --section-title-margin: 0;
+    --section-title-color: var(--black-color);
 
-    --title-margin-zero: 0;
-    --title-text-color: var(--black-color);
+    --section-padding: 5rem 0;
+    --section-header-padding: 0 0 3rem;
+    --section-body-padding: 0 0 3rem;
+    --section-footer-padding: 3rem 0 0;
+    --section-footer-align: center;
+    --footer-padding: 5rem 0 1rem;
 
-    /* New custom properties for nav */
     --nav-item-font-family: var(--title-font-family);
     --nav-item-font-weight: var(--bold-font-weight);
     --nav-item-font-size: var(--medium-font-size);
-    --nav-item-letter-spacing: 0.04rem; /* 4% of the root element */
+    --nav-item-letter-spacing: 0.04rem; /* 4% of the root font size */
     --nav-item-display: inline-block;
-    --nav-item-margin: calc(3rem - 1.5rem) 0 3rem; /* 3 times the root element on the bottom, adjusted for line-height */
+    --nav-item-margin: 0 0 3rem 0;
     --nav-item-link-hover: var(--primary-color);
 }
 
@@ -52,42 +57,106 @@ html {
 
 body {
     margin: 0;
+    color: var(--main-text-color);
     font-family: var(--base-font-family);
     font-size: var(--medium-font-size);
     font-weight: var(--regular-font-weight);
     line-height: var(--base-line-height);
-    color: var(--main-text-color);
 }
 
-/* Additional styles */
+a:link, a:visited {
+    text-decoration: none;
+}
 
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    background-color: var(--light-grey-color);
+}
+
+.visually-hidden {
+    display: none;
+}
+
+/* Section styles */
+.section {
+    padding: var(--section-padding);
+}
+
+.section-header {
+    padding: var(--section-header-padding);
+    text-align: var(--header-align-center);
+}
+
+.section-body {
+    padding: var(--section-body-padding);
+}
+
+.section-footer {
+    padding: var(--section-footer-padding);
+    text-align: var(--section-footer-align);
+}
+
+/* Title and Tagline */
+.section-title {
+    margin: var(--section-title-margin);
+    color: var(--section-title-color);
+    font-family: var(--title-font-family);
+    font-size: var(--xx-large-font-size);
+    font-weight: var(--bold-font-weight);
+}
+
+.section-tagline {
+    font-family: var(--title-font-family);
+    text-transform: var(--tagline-text-uppercase);
+    font-weight: var(--bold-font-weight);
+}
+
+/* Container */
+.container {
+    width: 960px;
+    margin: 0 auto;
+}
+
+/* Navigation */
 .navbar-menu {
     float: right;
 }
 
-nav {
+.nav {
     margin: 0;
     padding: 0;
+    list-style: none;
     text-align: center;
-    list-style: none; /* Assuming you want to remove list styling for nav items */
 }
 
-.nav-item {
-    font-family: var(--nav-item-font-family);
-    font-weight: var(--nav-item-font-weight);
-    font-size: var(--nav-item-font-size);
-    letter-spacing: var(--nav-item-letter-spacing);
+.nav .nav-item {
     display: var(--nav-item-display);
     margin: var(--nav-item-margin);
+    font-family: var(--nav-item-font-family);
+    font-size: var(--nav-item-font-size);
+    font-weight: var(--nav-item-font-weight);
+    letter-spacing: var(--nav-item-letter-spacing);
 }
 
-.nav-link {
+.nav .nav-link {
     display: block;
-    padding: calc(var(--small-font-size) / 2) var(--small-font-size); /* Half for top and bottom, equal for left and right */
+    padding: calc(var(--small-font-size) / 2) var(--small-font-size);
 }
 
-.nav-link:hover {
+.nav .nav-link:hover {
     color: var(--nav-item-link-hover);
 }
 
-/* Existing styles continue */
+/* Footer */
+.footer {
+    padding: var(--footer-padding);
+}
+
+/* Headings */
+h6, h5, h4, h3, h2, h1 {
+    font-family: var(--font-family-title);
+    font-weight: var(--bold-font-weight);
+}
