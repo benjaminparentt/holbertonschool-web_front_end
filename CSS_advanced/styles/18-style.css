@@ -1,0 +1,93 @@
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* normalize.css content */
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #d73953;
+    --black-color: #090909;
+    --white-color: #ffffff;
+    --light-grey-color: #f3f3f3;
+    --dark-grey-color: #353535;
+    --main-text-color: var(--black-color);
+
+    --base-font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --title-font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+    --small-font-size: 1.2rem;
+    --medium-font-size: 1.6rem;
+    --large-font-size: 1.8rem;
+    --x-large-font-size: 2.3rem;
+    --xx-large-font-size: 4.8rem;
+
+    --regular-font-weight: 400;
+    --bold-font-weight: 700;
+
+    --small-line-height: 1.2;
+    --base-line-height: 1.5;
+    --big-line-height: 1.8;
+
+    --header-align-center: center;
+    --tagline-text-uppercase: uppercase;
+
+    --title-margin-zero: 0;
+    --title-text-color: var(--black-color);
+
+    /* New custom properties for nav */
+    --nav-item-font-family: var(--title-font-family);
+    --nav-item-font-weight: var(--bold-font-weight);
+    --nav-item-font-size: var(--medium-font-size);
+    --nav-item-letter-spacing: 0.04rem; /* 4% of the root element */
+    --nav-item-display: inline-block;
+    --nav-item-margin: calc(3rem - 1.5rem) 0 3rem; /* 3 times the root element on the bottom, adjusted for line-height */
+    --nav-item-link-hover: var(--primary-color);
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: var(--base-font-family);
+    font-size: var(--medium-font-size);
+    font-weight: var(--regular-font-weight);
+    line-height: var(--base-line-height);
+    color: var(--main-text-color);
+}
+
+/* Additional styles */
+
+.navbar-menu {
+    float: right;
+}
+
+nav {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    list-style: none; /* Assuming you want to remove list styling for nav items */
+}
+
+.nav-item {
+    font-family: var(--nav-item-font-family);
+    font-weight: var(--nav-item-font-weight);
+    font-size: var(--nav-item-font-size);
+    letter-spacing: var(--nav-item-letter-spacing);
+    display: var(--nav-item-display);
+    margin: var(--nav-item-margin);
+}
+
+.nav-link {
+    display: block;
+    padding: calc(var(--small-font-size) / 2) var(--small-font-size); /* Half for top and bottom, equal for left and right */
+}
+
+.nav-link:hover {
+    color: var(--nav-item-link-hover);
+}
+
+/* Existing styles continue */
