@@ -202,12 +202,9 @@ a:active {
     margin: auto;
 }
 
-.navbar-menu {
-    float: right;
-}
-
 .nav .nav-link:before {
     content: "";
+    display: block;
     position: absolute;
     top: 0;
     left: 0;
@@ -216,9 +213,13 @@ a:active {
     height: 20%;
 }
 
-.nav .nav-item:hover .nav-link:before {
+.nav .nav-link:hover:before {
     background-color: var(--color-primary);
     width: 100%;
+}
+
+.navbar-menu {
+    float: right;
 }
 
 .nav {
