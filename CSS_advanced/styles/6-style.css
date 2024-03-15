@@ -18,14 +18,14 @@
 
 html {
     scroll-behavior: smooth;
-    font-size: 62.5%;
+    font-size: 62.5%; /* This makes 1rem = 10px for easier calculations */
 }
 
 body {
     color: var(--text-color);
     font-family: var(--font-family-base);
     font-size: var(--font-size-medium);
-    font-weight: var(--font-weight-regular);
+    font-weight: var(--font-weight-regular); /* Sets body font weight to 400 */
 }
 
 a {
@@ -44,4 +44,7 @@ a {
     color: var(--color-primary);
 }
 
-h
+h6, h5, h4, h3, h2, h1 {
+    font-family: var(--font-family-title);
+    font-weight: var(--font-weight-bold); /* Sets heading font weight to 700 */
+}
