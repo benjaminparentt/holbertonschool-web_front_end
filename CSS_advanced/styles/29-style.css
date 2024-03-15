@@ -202,7 +202,8 @@ a:active {
     margin: auto;
 }
 
-..navbar-menu
+.navbar-menu
+
 {
     float: right;
 }
