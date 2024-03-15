@@ -1,9 +1,9 @@
 :root {
-    --color-primary:#d73953;
-    --color-black:#090909;
-    --color-white:#ffffff;
-    --color-light-grey:#f3f3f3;
-    --color-dark-grey:#353535;
+    --color-primary: #d73953;
+    --color-black: #090909;
+    --color-white: #ffffff;
+    --color-light-grey: #f3f3f3;
+    --color-dark-grey: #353535;
     --text-color: var(--color-black);
     --font-family-base: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     --font-family-title: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -25,7 +25,7 @@
 
 html {
     scroll-behavior: smooth;
-    font-size: 62.5%; /* This makes 1rem = 10px for easier calculations */
+    font-size: 62.5%;
 }
 
 body {
@@ -36,21 +36,25 @@ body {
     line-height: var(--line-height-base);
 }
 
+/* Only targets anchor elements with an href attribute */
 a[href] {
     color: var(--text-color);
-    text-decoration: none; /* Removes text decoration */
+    text-decoration: none; /* No underline or other decorations by default */
 }
 
+/* Styles for visited links */
 a[href]:visited {
-    font-style: italic; /* Italicize the text for visited links */
+    font-style: italic; /* Italicizes visited links */
 }
 
+/* Styles for links on hover */
 a[href]:hover {
-    text-decoration: underline; /* Decorate the links with an underline when hovering */
+    text-decoration: underline; /* Underlines links when hovered */
 }
 
+/* Styles for active links */
 a[href]:active {
-    background-color: var(--color-light-grey); /* Set the color of the background for active links */
+    background-color: var(--color-light-grey); /* Sets background color for active links */
 }
 
 .visually-hidden {
