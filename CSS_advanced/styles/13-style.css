@@ -1,86 +1,90 @@
 :root {
-    --color-primary: #d73953;
-    --color-black: #090909;
-    --color-white: #ffffff;
-    --color-light-grey: #f3f3f3;
-    --color-dark-grey: #353535;
-    --text-color: var(--color-black);
-    --font-family-base: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    --font-family-title: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    --font-size-small: 1.2rem;
-    --font-size-medium: 1.6rem;
-    --font-size-large: 1.8rem;
-    --font-size-x-large: 2.3rem;
-    --font-size-xx-large: 4.8rem;
-    --font-weight-regular: 400;
-    --font-weight-bold: 700;
-    --line-height-small: 1.2;
-    --line-height-base: 1.5;
-    --line-height-big: 1.8;
-    --section-header-align: center;
-    --section-tagline-transform: uppercase;
-    --section-title-margin: 0;
-    --section-title-color: var(--color-black);
+    --primary-color: #d73953;
+    --black-color: #090909;
+    --white-color: #ffffff;
+    --light-grey-color: #f3f3f3;
+    --dark-grey-color: #353535;
+    --main-text-color: var(--black-color);
+
+    --base-font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --title-font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+    --small-font-size: 1.2rem;
+    --medium-font-size: 1.6rem;
+    --large-font-size: 1.8rem;
+    --x-large-font-size: 2.3rem;
+    --xx-large-font-size: 4.8rem;
+
+    --regular-font-weight: 400;
+    --bold-font-weight: 700;
+
+    --small-line-height: 1.2;
+    --base-line-height: 1.5;
+    --big-line-height: 1.8;
+
+    --header-align-center: center;
+    --tagline-text-uppercase: uppercase;
+
+    --title-margin-zero: 0;
+    --title-text-color: var(--black-color);
 }
 
 html {
-    scroll-behavior: smooth;
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 body {
-    color: var(--text-color);
-    font-family: var(--font-family-base);
-    font-size: var(--font-size-medium);
-    font-weight: var(--font-weight-regular);
-    line-height: var(--line-height-base);
+    font-family: var(--base-font-family);
+    font-size: var(--medium-font-size);
+    font-weight: var(--regular-font-weight);
+    line-height: var(--base-line-height);
+    color: var(--main-text-color);
 }
 
-/* Only targets anchor elements with an href attribute */
-a[href] {
-    color: var(--text-color);
-    text-decoration: none; /* No underline or other decorations by default */
+a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
 }
 
-/* Styles for visited links */
-a[href]:visited {
-    font-style: italic; /* Italicizes visited links */
+a:visited {
+    font-style: italic;
 }
 
-/* Styles for links on hover */
-a[href]:hover {
-    text-decoration: underline; /* Underlines links when hovered */
+a:hover {
+    text-decoration: underline;
 }
 
-/* Styles for active links */
-a[href]:active {
-    background-color: var(--color-light-grey); /* Sets background color for active links */
+a:active {
+    background-color: var(--light-grey-color);
 }
 
-.visually-hidden {
+.hidden {
     display: none;
 }
 
-.section-header {
-    text-align: var(--section-header-align);
+.category-card {
+    color: var(--primary-color);
 }
 
-.section-title {
-    font-family: var(--font-family-title);
-    font-size: var(--font-size-xx-large);
-    font-weight: var(--font-weight-bold);
-    margin: var(--section-title-margin);
-    color: var(--section-title-color);
+.header-section {
+    text-align: var(--header-align-center);
 }
 
-.section-tagline {
-    color: var(--color-primary);
-    font-family: var(--font-family-title);
-    text-transform: var(--section-tagline-transform);
-    font-weight: var(--font-weight-bold);
+.title-section {
+    font-family: var(--title-font-family);
+    font-size: var(--xx-large-font-size);
+    font-weight: var(--bold-font-weight);
+    margin: var(--title-margin-zero);
+    color: var(--title-text-color);
 }
 
-h6, h5, h4, h3, h2, h1 {
-    font-family: var(--font-family-title);
-    font-weight: var(--font-weight-bold);
+.tagline-section {
+    font-family: var(--title-font-family);
+    text-transform: var(--tagline-text-uppercase);
+    font-weight: var(--bold-font-weight);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--title-font-family);
+    font-weight: var(--bold-font-weight);
 }
