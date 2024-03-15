@@ -1,16 +1,11 @@
-:root {
-    --primary-color: #d73953;
-    --black-color: #090909;
-    /* Continue with your custom properties */
-}
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
-/* Custom styles following normalize.css */
-html {
-    font-size: 62.5%;
-    scroll-behavior: smooth;
-}
+/* Content of normalize.css goes here */
 
-/* Continue with the rest of your CSS */
+/* Universal box-sizing rule */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
 
 :root {
     --primary-color: #d73953;
