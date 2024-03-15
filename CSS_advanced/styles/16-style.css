@@ -1,0 +1,105 @@
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
+/* Content of normalize.css goes here */
+
+/* Universal box-sizing rule */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #d73953;
+    --black-color: #090909;
+    --white-color: #ffffff;
+    --light-grey-color: #f3f3f3;
+    --dark-grey-color: #353535;
+    --main-text-color: var(--black-color);
+
+    --base-font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --title-font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+    --small-font-size: 1.2rem;
+    --medium-font-size: 1.6rem;
+    --large-font-size: 1.8rem;
+    --x-large-font-size: 2.3rem;
+    --xx-large-font-size: 4.8rem;
+
+    --regular-font-weight: 400;
+    --bold-font-weight: 700;
+
+    --small-line-height: 1.2;
+    --base-line-height: 1.5;
+    --big-line-height: 1.8;
+
+    --header-align-center: center;
+    --tagline-text-uppercase: uppercase;
+
+    --title-margin-zero: 0;
+    --title-text-color: var(--black-color);
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--base-font-family);
+    font-size: var(--medium-font-size);
+    font-weight: var(--regular-font-weight);
+    line-height: var(--base-line-height);
+    color: var(--main-text-color);
+}
+
+a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+}
+
+a:visited {
+    font-style: italic;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    background-color: var(--light-grey-color);
+}
+
+.hidden {
+    display: none;
+}
+
+.category-card {
+    color: var(--primary-color);
+}
+
+.header-section {
+    text-align: var(--header-align-center);
+}
+
+.title-section {
+    font-family: var(--title-font-family);
+    font-size: var(--xx-large-font-size);
+    font-weight: var(--bold-font-weight);
+    margin: var(--title-margin-zero);
+    color: var(--title-text-color);
+}
+
+.tagline-section {
+    font-family: var(--title-font-family);
+    text-transform: var(--tagline-text-uppercase);
+    font-weight: var(--bold-font-weight);
+}
+
+/* Adding the container class styles */
+.container {
+    width: 960px;
+    margin: 0 auto; /* Centers the container with equal margins on both sides */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--title-font-family);
+    font-weight: var(--bold-font-weight);
+}
