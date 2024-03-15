@@ -81,7 +81,8 @@ a:active {
     display: none;
 }
 
-/* Section styles */
+/* Additional global styles... */
+
 .section {
     padding: var(--section-padding);
 }
@@ -100,7 +101,6 @@ a:active {
     text-align: var(--section-footer-align);
 }
 
-/* Title and Tagline */
 .section-title, .section-tagline {
     font-family: var(--title-font-family);
     font-weight: var(--bold-font-weight);
@@ -124,13 +124,11 @@ a:active {
     background-color: var(--black-color);
 }
 
-/* Container */
 .container {
     width: 960px;
     margin: 0 auto;
 }
 
-/* Navigation */
 .navbar-menu {
     float: right;
 }
@@ -160,20 +158,18 @@ a:active {
     color: var(--nav-item-link-hover);
 }
 
-/* Grid System */
 .row::after {
     content: "";
     display: table;
     clear: both;
 }
 
-/* Grid Columns */
+/* Column adjustments for responsive design */
 [class*="col-"] {
     float: left;
-    padding: calc(var(--small-font-size) / 2);
+    padding: 0.5rem;
 }
 
-/* Footer */
 .footer {
     padding: var(--footer-padding);
 }
@@ -187,11 +183,5 @@ a:active {
 
 .footer-copyright {
     font-size: var(--small-font-size);
-    color: var(--main-text-color);
-}
-
-/* Headings */
-h6, h5, h4, h3, h2, h1 {
-    font-family: var(--font-family-title);
-    font-weight: var(--bold-font-weight);
+    color: var(--text-color);
 }
